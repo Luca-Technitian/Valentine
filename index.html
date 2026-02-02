@@ -15,6 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+    overflow: hidden;
 }
 
 .card {
@@ -29,6 +30,10 @@ body {
 
 h1 {
     font-size: 24px;
+}
+
+p {
+    font-size: 16px;
 }
 
 button {
@@ -50,6 +55,13 @@ button {
     color: #ff4d6d;
     position: absolute;
 }
+
+img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 18px;
+    margin-top: 15px;
+}
 </style>
 </head>
 
@@ -63,8 +75,8 @@ button {
 
 <script>
 function moveNo() {
-    let x = Math.random() * (window.innerWidth - 100);
-    let y = Math.random() * (window.innerHeight - 50);
+    let x = Math.random() * (window.innerWidth - 120);
+    let y = Math.random() * (window.innerHeight - 120);
     let noBtn = document.getElementById("no");
 
     noBtn.style.left = x + "px";
@@ -74,8 +86,12 @@ function moveNo() {
 function yesClicked() {
     document.getElementById("container").innerHTML = `
         <h1>I LOVE YOU ❤️😍</h1>
-        <p>Great decision 😌✨<br>
-        Happy Valentine’s Day 💐</p>
+        <p>Great decision 😌✨<br>Happy Valentine’s Day 💐</p>
+
+        <img src="love.gif" alt="Love GIF">
+
+        <img src="us.jpg" alt="Us Together"
+             style="box-shadow:0 5px 15px rgba(0,0,0,0.3);">
     `;
 }
 </script>
